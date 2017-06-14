@@ -1,0 +1,44 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10 padding-none">
+            <h2>{{ category.name }}
+            <figure class="creator">
+                <img src="{{ creator.picture}}">
+                <figcaption>{{ creator.name }}</figcaption>
+            </figure>
+            </h2>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+
+    {% if items !=[] %}
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 padding-none">
+                <h2>Items:</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-5 padding-none">
+                    {% for i in items %}
+                        <div class="category-item">
+                            <p>{{i.name}}</p>
+                        </div>
+                    {% endfor %}
+            </div>
+            <div class="col-md-5 padding-none">
+                    {% for i in items %}
+                        <div class="category-item">
+                            <p>{{i.description}}</p>
+                        </div>
+                    {% endfor %}
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    {% endif %}
+{% endblock %}
