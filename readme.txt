@@ -28,12 +28,7 @@
    ------------
    The source code for this application can be obtained from the following
    GitHub repository:
-      https://github.com/MickElliott/fullstack-nanodegree-vm.git
-
-   This repository is a fork of the Udacity fullstack-nanodegree-vm repository
-   provided by Udacity which includes a Vagrant virtual development environment.
-   The source file for the Item Catalog Web Application can be found in the
-   'catalog' subdirectory.
+      https://github.com/MickElliott/fsnd-item-catalog.git
 
    The Item Catalog application consists of the following files:
       application.py
@@ -63,18 +58,26 @@
 
 4. Usage
    -----
-   1. Install Vagrant and VirtualBox. See the following URLs:
-        https://www.vagrantup.com/
-        https://www.virtualbox.com/
-      Instructions for installing these applications can be found on the Udacity
-      website:
-        https://www.udacity.com/wiki/ud088/vagrant
+   1. This application requires that the Flask, SQLAlchemy and oauth2client Python 
+      libraries be installed on the user's machine. Alternatively, the user can use
+      the virtual machine available in the Udacity OAuth2.0 repository that already 
+      contains these libraries. The following steps can be followed to setup this 
+      virtual environment:
 
-   2. The code can be obtained by cloning the GitHub repository with the following
-      command:
-        $ git clone https://github.com/MickElliott/fullstack-nanodegree-vm.git
+        a. Clone the following GitHub repository:
+            $ git clone https://github.com/Udacity/OAuth2.0.git
 
-   3. Launch the virtual machine by typing the following commands from the oath
+        b. Copy the Item Catalog code into the /catalog directory of the OAuth2.0
+           repository.
+
+        c. Install Vagrant and VirtualBox. See the following URLs:
+            https://www.vagrantup.com/
+            https://www.virtualbox.com/
+           Instructions for installing these applications can be found on the Udacity
+           website:
+            https://www.udacity.com/wiki/ud088/vagrant
+
+   2. Launch the virtual machine by typing the following commands from the oath
       directory (containing the VagrantFile file):
         $ vagrant up
         $ vagrant ssh
